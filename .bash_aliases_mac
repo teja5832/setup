@@ -1,0 +1,54 @@
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+
+alias c='clear'
+alias h='history'
+
+#LS
+alias ls='ls -bFG'
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias l='ls -hla'
+alias la='ls -A'
+alias lc='ls -CF'
+
+#git
+alias st='git status'
+alias gps='git push'
+alias gpl='git pull'
+
+#grep
+alias grep='grep --color=auto -in'
+
+alias type='whence -f'
+
+alias p='ipython3'
+alias pip='pip3'
+alias py="python3 -c 'print "
+alias diff='colordiff'
+
+alias e='emacs -nw'
+alias png='ping -c 5 www.google.com'
+
+alias ws='ssh teja5832@rama.cs.wisc.edu'
+
+alias d='cd ~/Desktop'
+alias dw='cd ~/Downloads'
+
+alias nb='cd'
+
+alias al='cd ~/active_learning'
+alias als='al ; source ~/active_learning/al_venv/bin/activate'
+
+alias lpv='cd ~/lp-verify'
+
+alias sk='cd ~/skynet-code'
+alias sks='sk ; source ~/skynet-code/skynet_venv/bin/activate'
+
+alias mnt='sshfs amar@fiddle-v2-master.southcentralus.cloudapp.azure.com:/datadrive2 /nobackup/amar-remote/ -o IdentityFile=/u/t/e/teja5832/.ssh/msr_rs' #-o defer_permissions'
+
+#alias type='type -f'
+
+alias gpu='ssh ubuntu@modoc-ubuntu.cs.wisc.edu'
+
+alias serv='ssh amar@fiddle-v2-master.southcentralus.cloudapp.azure.com'
