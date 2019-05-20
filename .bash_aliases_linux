@@ -21,20 +21,25 @@ alias gps='git push'
 alias gpl='git pull'
 
 #grep
-alias grep='grep --color=auto -in'
+alias grep='grep --color=auto'
 
 alias type='whence -f'
+alias type='type -f'
 
+alias open='xdg-open'
+alias diff='colordiff'
+
+#Python
 alias p='ipython3'
 alias pip='pip3'
 alias py="python3 -c 'print "
 
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias e='emacs -nw'
 alias png='ping -c 5 www.google.com'
-alias diff='colordiff'
 
-alias ws='ssh teja5832@rama.cs.wisc.edu'
+alias ws='ssh teja58432@rama.cs.wisc.edu'
 
 alias d='cd ~/Desktop'
 alias dw='cd ~/Downloads'
-

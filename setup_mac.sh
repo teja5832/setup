@@ -1,6 +1,6 @@
 #! /bin/sh
 
-ssh-keygen
+# ssh-keygen
 
 xcode-select --install
 
@@ -10,7 +10,9 @@ then
 fi
 
 # Basic packages
-brew install git wget axel aria2 bash zsh cmake bazel colordiff ffmpeg djvulibre gnuplot tee
+brew install emacs git wget axel aria2 bash zsh cmake bazel colordiff ffmpeg djvulibre gnuplot tee
+# brew install findutils gnu-sed gnu-tar gnu-which gnutls grep coreutils binutils diffutils gnu-indent
+brew install parallel jq gzip watch tmux nmap gpg
 brew install htop pdfgrep pdsh csshx qpdf source-highlight xz ansible screen tmux graphviz #python
 echo 'Basic packages done!'
 
@@ -34,6 +36,25 @@ pip3 install --upgrade pylint youtube-dl jedi json-logging numba networkx pandas
 
 brew cask install firefox brave-browser slack kindle send-to-kindle vlc sublime-text iterm2 telgram-desktop xquartz skype zoomus
 brew cask install mactex lyx
+
+brew doctor
+
+#Docker
+read -p "Install Docker? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	curl -fsSL https://get.docker.com -o get-docker.sh
+	sh get-docker.sh
+	# sudo apt-get remove docker docker-engine docker.io containerd runc
+	# sudo apt-get update -y
+	# sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+	# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+	# sudo apt-key fingerprint 0EBFCD88
+	# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+	# sudo apt-get -y update
+	# sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+fi
 
 # echo Symlinking subl
 # sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
