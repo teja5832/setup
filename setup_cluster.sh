@@ -29,4 +29,5 @@ pdsh -R ssh -w ^$LOGIN 'cp ~/.bashrc ~/.bashrc.bak'
 for i in $(cat $LOGIN);
 do 
 	scp -r .bashrc_cluster $i:~/.bashrc
+	scp -r tmux.conf $i:~
 done
