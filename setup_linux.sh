@@ -5,7 +5,7 @@
 sudo apt -y update 
 sudo apt -y upgrade
 
-sudo apt install -y build-essential gnu-coreutils python3-dev python3-pip python3-debug
+sudo apt install -y build-essential gnu-coreutils python3-dev python3-pip python3-debug awscli
 sudo apt install -y git wget axel bash zsh cmake bazel colordiff ffmpeg djvulibre gnuplot tmux
 
 # Shell
@@ -22,12 +22,13 @@ cp tmux.conf ~
 
 sudo apt install -y graphviz htop pdfgrep pdsh clusterssh qpdf source-highlight xz ansible
 
-sudo pip3 install --upgrade ipython[all] jupyter pytest numpy scipy matplotlib
+sudo pip3 install --upgrade "ipython[all]" jupyter pytest numpy scipy matplotlib
 sudo pip3 install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras hyperopt 
 sudo pip3 install --upgrade pylint youtube-dl jedi json-logging numba networkx pandas psutil rope mypy 
-sudo pip3 install --upgrade virtualenv scanf coverage
-# pip3 install --upgrade dask diskarray chest nltk spacy gym sympy q snakeviz scikit-image
-# python3 -c "import nltk ; nltk.download('all')"
+sudo pip3 install --upgrade virtualenv scanf coverage biopython
+sudo pip3 install --upgrade dask diskarray chest nltk spacy gym sympy q snakeviz scikit-image
+sudo pip3 install --upgrade boto3 forbiddenfruit csvkit cvxopt dill memory_profiler pep8
+python3 -c "import nltk ; nltk.download('all')"
 
 #Subl
 echo 'Installing Sublime Text'
