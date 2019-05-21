@@ -15,3 +15,4 @@ RUN pip3 install --upgrade pylint json-logging numba rope mypy sklearn
 RUN pip3 install --upgrade scanf coverage psutil hyperopt
 
 COPY .bashrc_dk ~/.bashrc
+COPY tmux.conf ~
