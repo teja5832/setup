@@ -11,9 +11,6 @@ alias ll='ls -FGlAhp'
 alias l='ls -hla'
 alias la='ls -A'
 alias lc='ls -CF'
-alias lf='ls -F -l -G %l | grep ^-'
-alias lk='ls -F -l -G %l | grep ^l'
-alias lx='ls -F -l -G %l | grep ^-..x'
 
 #git
 alias st='git status'

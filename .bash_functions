@@ -56,3 +56,20 @@ function arxiv_tar () {
     tar -xvf $_DIR.tar.gz --directory $_DIR
 }
 
+
+# LS
+function ldir () {
+    ls -F -o --color $1 | grep /$
+}
+
+function lf () {
+    ls -F -l -G $1 | grep ^-
+}
+
+function lk () {
+    ls -F -l -G $1 | grep ^l
+}
+
+function lx () {
+    ls -F -l -G $1 | grep ^-..x
+}

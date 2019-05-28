@@ -15,10 +15,10 @@ cp .zshrc_linux ~/.zshrc
 cp .bash_aliases_linux ~/.bash_aliases
 cp ~/.bashrc ~/.bashrc.bak
 cp .bashrc_linux ~/.bashrc
+cp .bash_functions ~
+cp tmux.conf ~
 
 echo Done with bashrc stuff!
-
-cp tmux.conf ~
 
 sudo apt install -y graphviz htop pdfgrep pdsh clusterssh qpdf source-highlight xz ansible
 

@@ -21,8 +21,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 cp ~/.zshrc ~/.zshrc.bak
 cp .zshrc_mac ~/.zshrc
 cp .bash_aliases_mac ~/.bash_aliases
-
+cp .bash_functions ~
 cp tmux.conf ~
+
 echo Done with bashrc stuff!
 
 # Python 3.6 for now
