@@ -25,6 +25,7 @@ alias type='type -f'
 
 alias open='xdg-open'
 alias diff='colordiff'
+alias csshx='clusterssh'
 
 #Python
 alias p='ipython3'
