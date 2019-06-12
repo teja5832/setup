@@ -19,9 +19,9 @@ echo 'Basic packages done!'
 # Shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp ~/.zshrc ~/.zshrc.bak
-cp .zshrc_mac ~/.zshrc
-cp .bash_aliases_mac ~/.bash_aliases
-cp .bash_functions ~
+cp zshrc_mac ~/.zshrc
+cp bash_aliases_mac ~/.bash_aliases
+cp bash_functions ~/.bash_functions
 cp tmux.conf ~
 
 echo Done with bashrc stuff!

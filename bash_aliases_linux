@@ -7,7 +7,7 @@ alias h='history'
 
 #LS
 alias ls='ls -bF --color'
-alias ll='ls -FGlAhp'
+alias ll='ls -FlAhp'
 alias l='ls -hla'
 alias la='ls -A'
 alias lc='ls -CF'

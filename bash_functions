@@ -59,17 +59,17 @@ function arxiv_tar () {
 
 # LS
 function ldir () {
-    ls -F -o --color $1 | grep /$
+    ls -F -o $1 | \grep /$
 }
 
 function lf () {
-    ls -F -l -G $1 | grep ^-
+    ls -F -l $1 | \grep ^-
 }
 
 function lk () {
-    ls -F -l -G $1 | grep ^l
+    ls -F -l $1 | \grep ^l
 }
 
 function lx () {
-    ls -F -l -G $1 | grep ^-..x
+    ls -F -l $1 | \grep ^-..x
 }
