@@ -63,12 +63,17 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     apt
+    autojump
+    aws
     command-not-found
     common-aliases
     compleat
     debian
     docker
+    extract
+    fasd
     history
+    json_tools
     jsontools
     pip
     pylint
@@ -78,9 +83,12 @@ plugins=(
     sudo
     tmux
     urltools
-    web-search
     wd
+    web-search
 )
+
+source $ZSH/oh-my-zsh.sh
+
 
 source $ZSH/oh-my-zsh.sh
 
