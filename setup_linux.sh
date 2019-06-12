@@ -11,16 +11,16 @@ sudo apt install -y git wget axel bash zsh cmake bazel colordiff ffmpeg djvulibr
 # Shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp ~/.zshrc ~/.zshrc.bak
-cp .zshrc_linux ~/.zshrc
-cp .bash_aliases_linux ~/.bash_aliases
+cp zshrc_linux ~/.zshrc
+cp bash_aliases_linux ~/.bash_aliases
 cp ~/.bashrc ~/.bashrc.bak
-cp .bashrc_linux ~/.bashrc
-cp .bash_functions ~
+cp bashrc_linux ~/.bashrc
+cp bash_functions ~/.bash_functions
 cp tmux.conf ~
 
 echo Done with bashrc stuff!
 
-sudo apt install -y graphviz htop pdfgrep pdsh clusterssh qpdf source-highlight xz ansible
+sudo apt install -y graphviz htop pdfgrep pdsh clusterssh qpdf source-highlight xz ansible autojump
 
 sudo pip3 install --upgrade "ipython[all]" jupyter pytest numpy scipy matplotlib
 sudo pip3 install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras hyperopt 
