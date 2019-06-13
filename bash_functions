@@ -24,7 +24,7 @@ function spoof_dw () {
 }
 
 function get_audio () {
-    pushd /nobackup/Music
+    pushd /nobackup/Music || pushd ~/Music
     youtube-dl -ciw --extract-audio --audio-format mp3 $1
     popd
 }
