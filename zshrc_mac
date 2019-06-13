@@ -93,6 +93,9 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+if [ -f ~/.additional_aliases ]; then
+    source ~/.additional_aliases
+fi
 
 # User configuration
 
