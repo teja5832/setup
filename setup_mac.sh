@@ -18,11 +18,13 @@ echo 'Basic packages done!'
 
 # Shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp ~/.zshrc ~/.zshrc.bak
-cp zshrc_mac ~/.zshrc
-cp bash_aliases_mac ~/.bash_aliases
-cp bash_functions ~/.bash_functions
-cp tmux.conf ~
+cp -iv ~/.zshrc ~/.zshrc.bak
+cp -iv zshrc_mac ~/.zshrc
+cp -iv bash_aliases_mac ~/.bash_aliases
+cp -iv bash_functions ~/.bash_functions
+cp -iv tmux.conf ~
+cp -iv pylintrc ~/.pylintrc
+cp -iv gitignore_global ~/.gitignore_global
 
 echo Done with bashrc stuff!
 

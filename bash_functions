@@ -40,11 +40,11 @@ function grp () {
 
 function gcm () {
     echo '---------------- PULL ----------------'
-    git pull
+    git pull || exit -1
     echo '--------------- COMMIT ---------------'
-    git commit -am "$*"
+    git commit -am "$*" || exit -1
     echo '---------------- PUSH ----------------'
-    git push
+    git push || exit -1
 }
 
 function arxiv_tar () {
