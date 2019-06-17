@@ -57,6 +57,11 @@ function arxiv_tar () {
 }
 
 
+function s () {
+    _DIR=`git rev-parse --show-toplevel || echo '.'`
+    subl $_DIR
+}
+
 # LS
 function ldir () {
     ls -F -o $1 | \grep /$
