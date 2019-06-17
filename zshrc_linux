@@ -96,6 +96,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.additional_aliases ]; then
+    source ~/.additional_aliases
+fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

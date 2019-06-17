@@ -10,13 +10,15 @@ sudo apt install -y git wget axel bash zsh cmake bazel colordiff ffmpeg djvulibr
 
 # Shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp ~/.zshrc ~/.zshrc.bak
-cp zshrc_linux ~/.zshrc
-cp bash_aliases_linux ~/.bash_aliases
-cp ~/.bashrc ~/.bashrc.bak
-cp bashrc_linux ~/.bashrc
-cp bash_functions ~/.bash_functions
-cp tmux.conf ~
+cp -iv ~/.zshrc ~/.zshrc.bak
+cp -iv zshrc_linux ~/.zshrc
+cp -iv bash_aliases_linux ~/.bash_aliases
+cp -iv ~/.bashrc ~/.bashrc.bak
+cp -iv bashrc_linux ~/.bashrc
+cp -iv bash_functions ~/.bash_functions
+cp -iv tmux.conf ~
+cp -iv pylintrc ~/.pylintrc
+cp -iv gitignore_global ~/.gitignore_global
 
 echo Done with bashrc stuff!
 

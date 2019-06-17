@@ -24,10 +24,12 @@ pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade virtualenv scanf coverage ps
 # pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade dask diskarray chest nltk spacy gym sympy q snakeviz scikit-image'
 # python3 -c "import nltk ; nltk.download('all')"
 
-pdsh -R ssh -w ^$LOGIN 'cp ~/.bashrc ~/.bashrc.bak'
+pdsh -R ssh -w ^$LOGIN 'cp -iv ~/.bashrc ~/.bashrc.bak'
 
 for i in $(cat $LOGIN);
 do 
 	scp -r bashrc_cluster $i:~/.bashrc
 	scp -r tmux.conf $i:~
+	scp -r pylintrc $i:~/.pylintrc
+	scp -r gitignore_global $i:~/.gitignore_global
 done
