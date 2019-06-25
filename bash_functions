@@ -40,11 +40,11 @@ function grp () {
 
 function gcm () {
     echo '---------------- PULL ----------------'
-    git pull || exit -1
+    git pull || return -1
     echo '--------------- COMMIT ---------------'
-    git commit -am "$*" || exit -1
+    git commit -am "$*" || return -1
     echo '---------------- PUSH ----------------'
-    git push || exit -1
+    git push || return -1
 }
 
 function arxiv_tar () {
@@ -58,7 +58,7 @@ function arxiv_tar () {
 
 
 function s () {
-    _DIR=`git rev-parse --show-toplevel || echo '.'`
+    _DIR=`git rev-parse --show-toplevel 2>/dev/null || echo '.'`
     subl $_DIR
 }
 
