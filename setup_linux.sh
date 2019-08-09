@@ -24,7 +24,7 @@ echo Done with bashrc stuff!
 
 sudo apt install -y graphviz htop pdfgrep pdsh clusterssh qpdf source-highlight xz ansible autojump
 
-sudo pip3 install --upgrade "ipython[all]" jupyter pytest numpy scipy matplotlib
+sudo pip3 install --upgrade "ipython[all]" jupyter pytest numpy scipy matplotlib opencv-python
 sudo pip3 install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras hyperopt 
 sudo pip3 install --upgrade pylint youtube-dl jedi json-logging numba networkx pandas psutil rope mypy 
 sudo pip3 install --upgrade virtualenv scanf coverage biopython

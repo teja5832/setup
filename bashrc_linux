@@ -146,8 +146,6 @@ export LESS=' -RN '
 # ack
 export ACK_PAGER="/usr/bin/less -R"
 
-export PATH="/nobackup/python35/bin:/nobackup/.cargo/bin:/nobackup/local/calibre:/nobackup/idea-IC-181.4892.42/bin:$PATH"
-
 set -o noclobber
 shopt -s histappend
 shopt -s nocaseglob

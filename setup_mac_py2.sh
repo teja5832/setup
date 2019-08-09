@@ -32,7 +32,7 @@ echo Done with bashrc stuff!
 # brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
 echo Authenticate to install "ipython[all]"
 sudo pip install --upgrade "ipython[all]"
-pip install --upgrade jupyter pytest numpy scipy matplotlib 
+pip install --upgrade jupyter pytest numpy scipy matplotlib opencv-python
 pip install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras hyperopt 
 pip install --upgrade pylint youtube-dl jedi json-logging numba networkx pandas psutil rope mypy virtualenv scanf coverage
 pip install --upgrade dask diskarray chest nltk spacy gym sympy q snakeviz scikit-image 

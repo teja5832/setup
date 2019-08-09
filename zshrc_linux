@@ -158,22 +158,5 @@ export LANG="en_US.UTF-8"
 export EDITOR='emacs -nw'
 export DIFF='colordiff'
 
-
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
-
-export GOPATH='/nobackup/go'
-export PYTHONUSERBASE='/nobackup/python'
-
-export PATH=$PYTHONUSERBASE/bin:$GOPATH/bin:$PATH
-
-
-# Gurobi
-export GUROBI_HOME="/nobackup/gurobi810/linux64" 
-export PATH="${PATH}:${GUROBI_HOME}/bin" 
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib" 
-export GRB_LICENSE_FILE="/nobackup/gurobi.lic"
-
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-

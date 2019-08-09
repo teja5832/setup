@@ -17,7 +17,7 @@ pdsh -R ssh -w ^$LOGIN 'sudo apt -y install htop tmux screen git emacs'
 pdsh -R ssh -w ^$LOGIN 'sudo apt -y install colordiff source-highlight'
 
 # Python
-pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade "ipython[all]" jupyter pytest numpy scipy matplotlib pandas'
+pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade "ipython[all]" jupyter pytest numpy scipy matplotlib pandas opencv-python'
 pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras'
 pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade pylint youtube-dl jedi json-logging numba networkx rope mypy'
 pdsh -R ssh -w ^$LOGIN 'sudo pip3 install --upgrade virtualenv scanf coverage psutil hyperopt'
