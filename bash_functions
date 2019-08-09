@@ -24,27 +24,46 @@ function spoof_dw () {
 }
 
 function get_audio () {
-    pushd /nobackup/Music || pushd ~/Music
+    pushd ~/Music
     youtube-dl -ciw --extract-audio --audio-format mp3 $1
     popd
+}
+
+function get_playlist () {
+    cd $1
+    if [[ -z $2 ]]
+    then
+        test -e list.txt || { echo "No list; specify URL" ; return -1 }
+    else
+        youtube-dl --get-url $2 | tee -a list.txt
+    fi
+
+    cat list.txt | parallel youtube-dl :::
+
+    for i in $(cat list.txt)  
+    do  
+        youtube-dl "youtube.com/watch?v=$i"
+    done
+
+    cd -
 }
 
 function grp () {
     if [ -z $2 ]
     then
-    grep $1 -rin --include='*.py' .
+        grep $1 -rin --include='*.py' .
     else
-           grep $1 -rin --include='*.py' $2
+        grep $1 -rin --include='*.py' $2
     fi
 }
 
 function gcm () {
     echo '---------------- PULL ----------------'
-    git pull || return -1
+    git pull || { echo "Pull Fail" ; return -1 }
     echo '--------------- COMMIT ---------------'
-    git commit -am "$*" || return -1
+    git commit -am "$*" || { echo "Commit Fail" ; return -1 }
     echo '---------------- PUSH ----------------'
-    git push || return -1
+    git push || { echo "Push Fail" ; return -1 }
 }
 
 function arxiv_tar () {
@@ -56,10 +75,22 @@ function arxiv_tar () {
     tar -xvf $_DIR.tar.gz --directory $_DIR
 }
 
-
 function s () {
+    [[ -z $1 ]] && _DIR="." || _DIR="$1"
+    [[ -e $_DIR  && ! -d $_DIR ]] && subl $_DIR && return 0
+    cd $_DIR
     _DIR=`git rev-parse --show-toplevel 2>/dev/null || echo '.'`
     subl $_DIR
+    cd -
+}
+
+function o () {
+    if [[ -z $1 ]]
+    then
+        open .
+    else
+        open $1
+    fi
 }
 
 # LS

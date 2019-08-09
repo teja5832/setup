@@ -12,7 +12,7 @@ fi
 # Basic packages
 brew install emacs git wget axel aria2 bash zsh cmake colordiff ffmpeg djvulibre gnuplot autojump
 # brew install findutils gnu-sed gnu-tar gnu-which gnutls grep coreutils binutils diffutils gnu-indent bazel tee
-brew install parallel jq gzip watch tmux nmap gpg awscli openblas ffmeg
+brew install parallel jq gzip watch tmux nmap gpg awscli openblas ffmeg "python@2"
 brew install htop pdfgrep pdsh csshx qpdf source-highlight xz ansible screen tmux graphviz
 echo 'Basic packages done!'
 
@@ -29,14 +29,14 @@ cp -iv gitignore_global ~/.gitignore_global
 echo Done with bashrc stuff!
 
 # Python 3.6 for now
-brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
+# brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
 echo Authenticate to install "ipython[all]"
-sudo pip3 install --upgrade "ipython[all]"
-pip3 install --upgrade jupyter pytest numpy scipy matplotlib 
-pip3 install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras hyperopt 
-pip3 install --upgrade pylint youtube-dl jedi json-logging numba networkx pandas psutil rope mypy virtualenv scanf coverage
-pip3 install --upgrade dask diskarray chest nltk spacy gym sympy q snakeviz scikit-image 
-pip3 install --upgrade appnope boto3 forbiddenfruit csvkit cvxopt dill memory_profiler pep8
+sudo pip install --upgrade "ipython[all]"
+pip install --upgrade jupyter pytest numpy scipy matplotlib 
+pip install --upgrade sklearn tensorflow torch torchvision tensorflow-tensorboard keras hyperopt 
+pip install --upgrade pylint youtube-dl jedi json-logging numba networkx pandas psutil rope mypy virtualenv scanf coverage
+pip install --upgrade dask diskarray chest nltk spacy gym sympy q snakeviz scikit-image 
+pip install --upgrade appnope boto3 forbiddenfruit csvkit cvxopt dill memory_profiler pep8
 python3 -c "import nltk ; nltk.download('all')"
 
 brew cask install firefox brave-browser slack kindle send-to-kindle vlc sublime-text iterm2 xquartz skype zoomus
